@@ -1,9 +1,13 @@
 <script>
+	import Email from '$lib/Email.svelte';
+
 	function resizeIframe(obj) {
 		obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
 	}
 </script>
 
+<Email />
+<h2>Idea Of The Day</h2>
 <h2>Video Of The Day</h2>
 <iframe
 	title="Youtube Video Player"
@@ -16,6 +20,11 @@
 	allowfullscreen
 />
 
+<!--
+<h2>Article Of The Day</h2>
+<h2>Podcast Of The Day</h2>
+<h2>Quote Of The Day</h2>
+-->
 <style>
 	h2 {
 		display: flex;
