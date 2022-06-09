@@ -5,7 +5,6 @@ import Footer from './Footer'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import SectionContainer from './SectionContainer'
-import ThemeSwitch from './ThemeSwitch'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -40,7 +39,6 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
-            <ThemeSwitch />
             <MobileNav />
           </div>
         </header>
