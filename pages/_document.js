@@ -4,6 +4,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en" className="scroll-smooth">
         <Head>
+          <script defer data-domain="hungrimind.com" src="https://plausible.io/js/plausible.js"></script>
           <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
           <link
             rel="icon"
@@ -22,7 +23,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-          <script defer data-domain="hungrimind.com" src="https://plausible.io/js/plausible.js"></script>
+          
 
         </Head>
         <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
