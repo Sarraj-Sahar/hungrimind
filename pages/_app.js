@@ -9,9 +9,6 @@ import 'katex/dist/katex.css'
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 
-
-
-
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
