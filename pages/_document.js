@@ -4,7 +4,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en" className="scroll-smooth">
         <Head>
-          <script defer data-domain="hungrimind.com" src="https://plausible.io/js/plausible.js"></script>
           <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
           <link
             rel="icon"
