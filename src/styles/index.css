@@ -31,7 +31,6 @@ body {
 }
 
 nav ul {
-	list-style: none;
 	padding: 0;
 }
 
@@ -95,6 +94,12 @@ p {
 
 .content ul {
 	line-height: 1.1em;
+	list-style: inside;
+}
+
+.content ol{
+	list-style: inside;
+	list-style-type: decimal;
 }
 
 p,
@@ -349,7 +354,6 @@ h2.heading {
 .heading-link a {
 	font: inherit;
 	color: inherit;
-	text-decoration: none;
 }
 
 /* Screenreader Only Text */
