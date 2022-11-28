@@ -1,8 +1,8 @@
 ---
+import type { MarkdownHeading } from 'astro';
 import type { Frontmatter } from '../../config';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
-import type { MarkdownHeading } from 'astro';
 
 type Props = {
 	frontmatter: Frontmatter;
@@ -22,7 +22,7 @@ const title = frontmatter.title;
 		</nav>
 		<slot />
 	</section>
-	<nav class="block sm:hidden">
+	<nav class="block">
 		<MoreMenu editHref={githubEditUrl} />
 	</nav>
 </article>
@@ -45,9 +45,9 @@ const title = frontmatter.title;
 		display: block;
 	}
 
-	@media (min-width: 50em) {
-		.sm\:hidden {
-			display: none;
-		}
+	
+	.sm\:hidden {
+		display: none;
 	}
+	
 </style>

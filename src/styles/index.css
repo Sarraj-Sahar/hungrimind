@@ -320,6 +320,7 @@ h2.heading {
 	font-size: 1rem;
 	padding: 0.1rem 0 0.1rem 1rem;
 	border-left: 4px solid var(--theme-divider);
+	list-style-type: none;
 }
 
 .heading-link:hover,
