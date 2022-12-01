@@ -1,10 +1,9 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
+name: Website Feature Request
+about: Suggest an idea for the website
+title: ""
+labels: feature
+assignees: ""
 ---
 
 **Is your feature request related to a problem? Please describe.**
