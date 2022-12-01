@@ -1,6 +1,6 @@
 # Hungrimind
 
-Hungrimind is an open source hub for learning and exploring various topics.
+Hungrimind is a learning hub for exploring various topics for people with a hungry mind. 😉
 
 It's like a blog except
 
