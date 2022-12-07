@@ -2,7 +2,6 @@
 import * as CONFIG from "../../config";
 import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from "../../languages";
 import LanguageSelect from "./LanguageSelect";
-import Search from "./Search";
 import SidebarToggle from "./SidebarToggle";
 import SkipToContent from "./SkipToContent.astro";
 
@@ -31,9 +30,9 @@ const lang = getLanguageFromURL(currentPage);
         <LanguageSelect lang={lang} client:idle />
       )
     }
-    <div class="search-item">
+    <!-- <div class="search-item">
       <Search client:idle />
-    </div>
+    </div> -->
   </nav>
 </header>
 

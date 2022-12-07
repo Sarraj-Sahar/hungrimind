@@ -1,0 +1,44 @@
+---
+title: Widget Tree
+description: What are widgets and widget tree
+layout: ../../layouts/MainLayout.astro
+---
+
+There is a saying in Flutter that _everything_ is a widget. But you can go a little deeper and say that a Flutter app is a big tree of widgets .......... a **Widget Tree**.
+
+## What is a Widget
+
+To know what a widget tree is we need to know what a widget is. A widget is the fundamental building block of a Flutter application. It is a blueprint that tells flutter (and eventually your device) how you want your application to look, and behave.
+
+![Widgets](/widget_tree/1.png)
+
+This image above has 14 widgets in it. The first one is to display the row, then there are 3 columns, and each column has an icon and some text. This is what it looks like with each widget highlighted.
+
+![Widgets Highlighted](/widget_tree/2.png)
+
+There is a whole <a href="https://docs.flutter.dev/reference/widgets" target="_blank">gigantic library</a> of these widgets and they can do everything from detecting a touch input, to setting your layout, to navigation within the app. The sheer number of widgets seems daunting at first, but don't worry to do build basic apps you won't need to use most of them, and then you can add more fancy ones in as you need them.
+
+One of the most used widgets is called `Container`. It's the most used because it's so flexible. If you are coming from web development `Container` is similar to a `div` element. You can configure almost every widget Flutter provides, and `Container` is one of the most configurable.
+
+### Configuring a Widget
+
+Configuring a widget means to change something about it. For example, the `Text` widget has configurations to change the styling and we do this through a property called `textStyle`. The `ElevatedButton` has a configuration to change the color using the `color` property. The `Container` widget I keep talking about is extra configurable. You can do things like this:
+
+```dart
+Container(
+    height: 200,
+    width: 200,
+    margin: const EdgeInsets.all(20),
+    decoration: BoxDecoration(
+        border: Border.all(color: Colors.black, width: 20),
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.blue,
+    ),
+    child: const Text(
+        "Hello",
+        style: TextStyle(color: Colors.white),
+    ),
+),
+```
+
+... I'm going to be honest, I got tired right now and I'm going to go to sleep, but I want to make sure my changes are saved so I will push this to prod. Not many people know about this site, but if you manage to find it somehow, this page will be finished in the next day or two.

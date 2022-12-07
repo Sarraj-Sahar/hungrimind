@@ -51,8 +51,8 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Introduction', link: 'en/introduction' },
 			{ text: 'Install Flutter for Mac', link: 'en/install_flutter_macos' },
 		],
-		'Learn': [{ text: 'Coming Soon', link: 'en/comingsoon' }],
+		'Learn': [{ text: 'Widget Tree', link: 'en/widget_tree' }],
 		'Build': [{ text: 'Coming Soon', link: 'en/comingsoon' }],
-		'Resources': [{ text: 'Coming Soon', link: 'en/comingsoon' }],
+		'Resources': [{ text: 'Flutter Roadmap', link: 'https://tadaspetra.gumroad.com/l/flutterroadmap' }],
 	},
 };
