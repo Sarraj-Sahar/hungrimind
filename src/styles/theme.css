@@ -51,7 +51,7 @@
 	--color-blue-dark: var(--color-base-blue-dark), 39%;
 	--color-green: var(--color-base-green), 42%;
 	--color-orange: var(--color-base-orange), 50%;
-	--color-purple: var(--color-base-purple), 54%;
+	--color-purple: var(--color-base-purple), 70%;
 	--color-red: var(--color-base-red), 54%;
 	--color-yellow: var(--color-base-yellow), 59%;
 }
@@ -59,7 +59,7 @@
 :root {
 	color-scheme: light;
 	--theme-accent: hsla(var(--color-gray-60), 1);
-	--theme-text-accent: hsla(var(--color-blue), 1);
+	--theme-text-accent: hsla(var(--color-purple), 1);
 	--theme-accent-opacity: 0.15;
 	--theme-divider: hsla(var(--color-gray-95), 1);
 	--theme-text: hsla(var(--color-gray-10), 1);
@@ -89,7 +89,7 @@ body {
 	color-scheme: dark;
 	--theme-accent-opacity: 0.15;
 	--theme-accent: hsla(var(--color-gray-60), 1);
-	--theme-text-accent: hsla(var(--color-blue), 1);
+	--theme-text-accent: hsla(var(--color-purple), 1);
 	--theme-divider: hsla(var(--color-gray-10), 1);
 	--theme-text: hsla(var(--color-gray-90), 1);
 	--theme-text-light: hsla(var(--color-gray-80), 1);

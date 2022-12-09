@@ -41,4 +41,23 @@ Container(
 ),
 ```
 
-... I'm going to be honest, I got tired right now and I'm going to go to sleep, but I want to make sure my changes are saved so I will push this to prod. Not many people know about this site, but if you manage to find it somehow, this page will be finished in the next day or two.
+Which takes a widget that would unmodified not be visible, to this:
+![Modified Container](/widget_tree/4.png)
+
+## What is a Widget Tree
+
+To build out your full application you need to take these widgets, and organize them in a tree like structure that becomes structure of your application. Let's take the pervious example with the highlighted row of icons and texts.
+
+![Widgets Highlighted](/widget_tree/2.png)
+
+The widget tree for this layout would look like this:
+
+![Widget Tree](/widget_tree/3.png)
+
+This is a very important concept to understand. This is how your flutter app is built. Your write the code to create this widget tree, and Flutter uses that widget tree as a blueprint to render your application to all these devices. As you develop in Flutter you will run into problems with state management or layouts or even other problems. By understanding the widget tree you will be able to work through it and solve those problems.
+
+## Widget Inspector in DevTools
+
+Flutter has a debugging tool called the Widget Inspector. Whilst you are running your application you can open the Widget Inspector and see the widget tree that is currently built. You can also access details of a specific widget when you click on it and even adjust some layout properties and see them reflected in your application. It's a very powerful tool.
+
+![DevTools](/widget_tree/5.png)
