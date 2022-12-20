@@ -49,6 +49,7 @@ export const FLUTTER_SIDEBAR: Sidebar = {
 	en: {
 		'Getting Started': [
 			{ text: 'Introduction', link: 'flutter/introduction' },
+			{ text: 'Flutter Introduction', link: 'flutter/introduction_flutter' },
 			{ text: 'Install Flutter for Mac', link: 'flutter/install_flutter_macos' },
 		],
 		'Learn': [{ text: 'Widget Tree', link: 'flutter/widget_tree' }],
