@@ -1,5 +1,5 @@
 ---
-import { SIDEBAR } from "../../config";
+import { FLUTTER_SIDEBAR } from "../../config";
 import { getLanguageFromURL } from "../../languages";
 
 type Props = {
@@ -11,7 +11,7 @@ const currentPageMatch = currentPage.endsWith("/")
   ? currentPage.slice(1, -1)
   : currentPage.slice(1);
 const langCode = getLanguageFromURL(currentPage);
-const sidebar = SIDEBAR[langCode];
+const sidebar = FLUTTER_SIDEBAR[langCode];
 ---
 
 <nav aria-labelledby="grid-left">

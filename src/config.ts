@@ -45,14 +45,14 @@ export type Sidebar = Record<
 	typeof KNOWN_LANGUAGE_CODES[number],
 	Record<string, { text: string; link: string }[]>
 >;
-export const SIDEBAR: Sidebar = {
+export const FLUTTER_SIDEBAR: Sidebar = {
 	en: {
 		'Getting Started': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Install Flutter for Mac', link: 'en/install_flutter_macos' },
+			{ text: 'Introduction', link: 'flutter/introduction' },
+			{ text: 'Install Flutter for Mac', link: 'flutter/install_flutter_macos' },
 		],
-		'Learn': [{ text: 'Widget Tree', link: 'en/widget_tree' }],
-		'Build': [{ text: 'Coming Soon', link: 'en/comingsoon' }],
+		'Learn': [{ text: 'Widget Tree', link: 'flutter/widget_tree' }],
+		'Build': [{ text: 'Coming Soon', link: 'flutter/comingsoon' }],
 		'Resources': [{ text: 'Flutter Roadmap', link: 'https://tadaspetra.gumroad.com/l/flutterroadmap' }],
 	},
 };
