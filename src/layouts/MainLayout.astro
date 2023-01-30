@@ -25,6 +25,11 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
   <head>
     <HeadCommon />
     <HeadSEO {...data} canonicalUrl={canonicalURL} />
+    <script
+      defer
+      data-domain="hungrimind.com"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
     <title>
       {`${data.title} 🚀 ${SITE.title}`}
     </title>
