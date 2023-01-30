@@ -1,17 +1,17 @@
 ---
-import { FLUTTER_SIDEBAR } from "../../config";
+import { SIDEBAR } from "../../consts";
 import { getLanguageFromURL } from "../../languages";
 
 type Props = {
   currentPage: string;
 };
 
-const { currentPage } = Astro.props as Props;
+const { currentPage } = Astro.props;
 const currentPageMatch = currentPage.endsWith("/")
   ? currentPage.slice(1, -1)
   : currentPage.slice(1);
 const langCode = getLanguageFromURL(currentPage);
-const sidebar = FLUTTER_SIDEBAR[langCode];
+const sidebar = SIDEBAR[langCode];
 ---
 
 <nav aria-labelledby="grid-left">
@@ -20,7 +20,7 @@ const sidebar = FLUTTER_SIDEBAR[langCode];
       Object.entries(sidebar).map(([header, children]) => (
         <li>
           <div class="nav-group">
-            <h3>{header}</h3>
+            <h2>{header}</h2>
             <ul>
               {children.map((child) => {
                 var url;

@@ -1,28 +1,17 @@
 export const SITE = {
 	title: 'hungrimind',
-	description: 'A place for learning',
-	defaultLanguage: 'en_US',
-};
+	description: 'for curious builders',
+	defaultLanguage: 'en-us',
+} as const;
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://github.com/withastro/astro/blob/main/assets/social/banner.jpg?raw=true',
+		src: 'https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true',
 		alt:
 			'astro logo on a starry expanse of space,' +
 			' with a purple saturn-like planet floating in the right foreground',
 	},
 	twitter: 'astrodotbuild',
-};
-
-// This is the type of the frontmatter you put in the docs markdown files.
-export type Frontmatter = {
-	title: string;
-	description: string;
-	layout: string;
-	image?: { src: string; alt: string };
-	dir?: 'ltr' | 'rtl';
-	ogLocale?: string;
-	lang?: string;
 };
 
 export const KNOWN_LANGUAGES = {
@@ -36,24 +25,30 @@ export const COMMUNITY_INVITE_URL = `https://discord.gg/nz8kFDm7gN`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-	indexName: 'hungrimind',
-	appId: '2S1CA35SC2',
-	apiKey: '32d165dd0602d9d58e432e8df472742a',
+	indexName: 'XXXXXXXXXX',
+	appId: 'XXXXXXXXXX',
+	apiKey: 'XXXXXXXXXX',
 };
 
 export type Sidebar = Record<
-	typeof KNOWN_LANGUAGE_CODES[number],
+	(typeof KNOWN_LANGUAGE_CODES)[number],
 	Record<string, { text: string; link: string }[]>
 >;
-export const FLUTTER_SIDEBAR: Sidebar = {
+export const SIDEBAR: Sidebar = {
 	en: {
 		'Getting Started': [
 			{ text: 'Introduction', link: 'flutter/introduction' },
 			{ text: 'Flutter Introduction', link: 'flutter/introduction_flutter' },
 			{ text: 'Install Flutter for Mac', link: 'flutter/install_flutter_macos' },
 		],
-		'Learn': [{ text: 'Widget Tree', link: 'flutter/widget_tree' }],
-		'Build': [{ text: 'Coming Soon', link: 'flutter/comingsoon' }],
-		'Resources': [{ text: 'Flutter Roadmap', link: 'https://tadaspetra.gumroad.com/l/flutterroadmap' }],
+		'Learn': [
+			{ text: 'Widget Tree', link: 'flutter/widget_tree' },
+		],
+		'Build': [
+			{ text: 'Coming Soon', link: 'flutter/comingsoon' },
+		],
+		'Resources': [
+			{ text: 'Flutter Roadmap', link: 'https://tadaspetra.gumroad.com/l/flutterroadmap' },
+		],
 	},
 };

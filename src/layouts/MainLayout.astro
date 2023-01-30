@@ -1,45 +1,32 @@
 ---
 import type { MarkdownHeading } from "astro";
+import type { CollectionEntry } from "astro:content";
+import Footer from "../components/Footer/Footer.astro";
 import HeadCommon from "../components/HeadCommon.astro";
 import Header from "../components/Header/Header.astro";
 import HeadSEO from "../components/HeadSEO.astro";
 import LeftSidebar from "../components/LeftSidebar/LeftSidebar.astro";
 import PageContent from "../components/PageContent/PageContent.astro";
 import RightSidebar from "../components/RightSidebar/RightSidebar.astro";
-import * as CONFIG from "../config";
+import { GITHUB_EDIT_URL, SITE } from "../consts";
 
-type Props = {
-  frontmatter: CONFIG.Frontmatter;
+type Props = CollectionEntry<"docs">["data"] & {
   headings: MarkdownHeading[];
 };
 
-const { frontmatter, headings } = Astro.props as Props;
+const { headings, ...data } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPage = Astro.url.pathname;
-const currentFile = `src/pages${currentPage.replace(/\/$/, "")}.mdx`;
-const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
+const currentFile = `content/docs/${currentPage.replace(/\/$/, "")}.mdx`;
+const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 ---
 
-<html
-  dir={frontmatter.dir ?? "ltr"}
-  lang={frontmatter.lang ?? "en-us"}
-  class="initial"
->
+<html dir={data.dir} lang={data.lang} class="initial">
   <head>
     <HeadCommon />
-    <HeadSEO frontmatter={frontmatter} canonicalUrl={canonicalURL} />
-    <!--- Scripts -->
-    <script
-      defer
-      data-domain="hungrimind.com"
-      src="https://plausible.io/js/plausible.js"
-    ></script>
+    <HeadSEO {...data} canonicalUrl={canonicalURL} />
     <title>
-      {
-        frontmatter.title
-          ? `${frontmatter.title} 🚀 ${CONFIG.SITE.title}`
-          : CONFIG.SITE.title
-      }
+      {`${data.title} 🚀 ${SITE.title}`}
     </title>
     <style>
       body {
@@ -139,7 +126,7 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
       </aside>
       <div id="grid-main">
         <PageContent
-          frontmatter={frontmatter}
+          title={data.title}
           headings={headings}
           githubEditUrl={githubEditUrl}
         >
@@ -150,6 +137,6 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
         <RightSidebar headings={headings} githubEditUrl={githubEditUrl} />
       </aside>
     </main>
-    <!-- <Footer path={currentFile} /> -->
+    <Footer path={currentFile} />
   </body>
 </html>
