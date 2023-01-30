@@ -48,7 +48,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Coming Soon', link: 'flutter/comingsoon' },
 		],
 		'Resources': [
-			{ text: 'Flutter Roadmap', link: 'https://tadaspetra.gumroad.com/l/flutterroadmap' },
+			{ text: 'Flutter Roadmap', link: 'https://tadaspetra.ck.page/products/flutter-roadmap' },
 		],
 	},
 };
