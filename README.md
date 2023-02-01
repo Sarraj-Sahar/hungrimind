@@ -1,4 +1,4 @@
-# <img src="/public/blacklogo.svg" style="width: 60px; margin-bottom: -18px;"> hungrimind
+# <picture><source media="(prefers-color-scheme: light)" srcset="/public/blacklogo.svg"><img alt="Triangle looping within itself" src="/public/whitelogo.svg" style="width: 50px;margin-bottom: -10px;"></picture> hungrimind
 
 Hungrimind is a learning hub for exploring various topics for people with a hungry mind. 😉
 
