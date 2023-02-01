@@ -134,11 +134,13 @@ const lang = getLanguageFromURL(currentPage);
   }
 
   .email-signup {
+    display: none;
     display: hidden;
   }
 
   @media (min-width: 50em) {
     .email-signup {
+      display: block;
       position: relative;
       z-index: 10;
       flex-grow: 1;
