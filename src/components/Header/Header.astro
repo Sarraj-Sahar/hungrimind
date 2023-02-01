@@ -1,7 +1,6 @@
 ---
 import { SITE } from "../../consts";
-import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from "../../languages";
-import LanguageSelect from "./LanguageSelect";
+import { getLanguageFromURL } from "../../languages";
 import SidebarToggle from "./SidebarToggle";
 import SkipToContent from "./SkipToContent.astro";
 
@@ -24,18 +23,20 @@ const lang = getLanguageFromURL(currentPage);
         <h1>{SITE.title ?? "Documentation"}</h1>
       </a>
     </div>
-    <div style="flex-grow: 1;"></div>
+    <!-- <div style="flex-grow: 1;"></div>
     {
       KNOWN_LANGUAGE_CODES.length > 1 && (
         <LanguageSelect lang={lang} client:idle />
       )
-    }
-    <script
-      async
-      data-uid="e2f59a92a5"
-      src="https://tadaspetra.ck.page/e2f59a92a5/index.js"
-    ></script>
-    <!-- <div class="search-item">
+    } -->
+    <div class="email-signup">
+      <script
+        async
+        data-uid="e2f59a92a5"
+        src="https://tadaspetra.ck.page/e2f59a92a5/index.js"
+      ></script>
+    </div>
+    <!-- <div class="email-signup">
       <Search client:idle />
     </div> -->
   </nav>
@@ -132,25 +133,24 @@ const lang = getLanguageFromURL(currentPage);
     --docsearch-logo-color: var(--theme-text);
   }
 
-  .search-item {
-    display: none;
-    position: relative;
-    z-index: 10;
-    flex-grow: 1;
-    padding-right: 0.7rem;
-    display: flex;
-    max-width: 200px;
+  .email-signup {
+    display: hidden;
   }
 
   @media (min-width: 50em) {
-    .search-item {
+    .email-signup {
+      position: relative;
+      z-index: 10;
+      flex-grow: 1;
+      padding-right: 0.7rem;
+      max-width: 200px;
       max-width: 400px;
     }
   }
 </style>
 
 <style is:global>
-  .search-item > * {
+  .email-signup > * {
     flex-grow: 1;
   }
 </style>
