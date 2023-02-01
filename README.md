@@ -7,7 +7,7 @@ Hungrimind is a learning hub for exploring various topics for people with a hung
 It's like a blog except
 
 - Structured
-- Update-able
+- Update To Date
 - Searchable
 
 Over time, this will become the go-to place where you can learn something new. This is a big goal, that will probably take years to implement (fyi: today is Dec 1st 2022). 

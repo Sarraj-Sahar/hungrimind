@@ -1,7 +1,12 @@
 ---
 title: Widget Tree
 description: What are widgets and widget tree
+output: 
+    pdf_document:
+urlcolor: blue
 ---
+
+
 
 There is a saying in Flutter that _everything_ is a widget. But you can go a little deeper and say that a Flutter app is a big tree of widgets .......... a **Widget Tree**.
 
@@ -9,11 +14,11 @@ There is a saying in Flutter that _everything_ is a widget. But you can go a lit
 
 To know what a widget tree is we need to know what a widget is. A widget is the fundamental building block of a Flutter application. It is a blueprint that tells flutter (and eventually your device) how you want your application to look, and behave. 
 
-![Widgets](/widget_tree/1.png)
+![](/widget_tree/1.png)
 
 This image above has 14 widgets in it. The first one is to display the row, then there are 3 columns, and each column has an icon and some text. This is what it looks like with each widget highlighted.
 
-![Widgets Highlighted](/widget_tree/2.png)
+![](/widget_tree/2.png)
 
 There is a whole <a href="https://docs.flutter.dev/reference/widgets" target="_blank">gigantic library</a> of these widgets and they can do everything from detecting a touch input, to setting your layout, to navigating within the app. The sheer number of widgets seems daunting at first, but don't worry. To build basic apps you won't need to use most of them, and then you can add more fancy ones in as you need them.
 
@@ -40,6 +45,7 @@ Container(
 ),
 ```
 
+
 Which takes a widget that without any configuration would not be visible, to this:
 
 <img src="/widget_tree/3.png" width="50%" style="margin-left: 9rem;" />
@@ -48,7 +54,7 @@ Which takes a widget that without any configuration would not be visible, to thi
 
 To build out your full application you need to take these widgets, and organize them in a tree-like structure called a "Widget Tree" that becomes structure of your whole application. Let's take the previous example with the highlighted row of icons and texts.
 
-![Widgets Highlighted](/widget_tree/2.png)
+![](/widget_tree/2.png)
 
 The widget tree for this layout would look like this:
 
@@ -60,4 +66,4 @@ This is a very important concept to understand since this is how your Flutter ap
 
 Flutter has a debugging tool called the Widget Inspector. Whilst you are running your application you can open the Widget Inspector and see the widget tree that is currently built. You can also access details of a specific widget when you click on it and even adjust some layout properties and see them reflected in your application. It's a very powerful tool.
 
-![DevTools](/widget_tree/5.png)
+![](/widget_tree/5.png)
