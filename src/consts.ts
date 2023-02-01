@@ -11,7 +11,7 @@ export const OPEN_GRAPH = {
 			'astro logo on a starry expanse of space,' +
 			' with a purple saturn-like planet floating in the right foreground',
 	},
-	twitter: 'astrodotbuild',
+	twitter: 'hungrimind',
 };
 
 export const KNOWN_LANGUAGES = {
@@ -36,9 +36,9 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Getting Started': [
+		'Get Started': [
 			{ text: 'Introduction', link: 'flutter/introduction' },
-			{ text: 'Flutter Introduction', link: 'flutter/introduction_flutter' },
+			{ text: 'What is Flutter?', link: 'flutter/introduction_flutter' },
 			{ text: 'Install Flutter for Mac', link: 'flutter/install_flutter_macos' },
 		],
 		'Learn': [

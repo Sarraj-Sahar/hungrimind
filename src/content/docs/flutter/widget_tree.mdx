@@ -15,13 +15,13 @@ This image above has 14 widgets in it. The first one is to display the row, then
 
 ![Widgets Highlighted](/widget_tree/2.png)
 
-There is a whole <a href="https://docs.flutter.dev/reference/widgets" target="_blank">gigantic library</a> of these widgets and they can do everything from detecting a touch input, to setting your layout, to navigation within the app. The sheer number of widgets seems daunting at first, but don't worry to do build basic apps you won't need to use most of them, and then you can add more fancy ones in as you need them.
+There is a whole <a href="https://docs.flutter.dev/reference/widgets" target="_blank">gigantic library</a> of these widgets and they can do everything from detecting a touch input, to setting your layout, to navigating within the app. The sheer number of widgets seems daunting at first, but don't worry. To build basic apps you won't need to use most of them, and then you can add more fancy ones in as you need them.
 
-One of the most used widgets is called `Container`. It's the most used because it's so flexible. If you are coming from web development `Container` is similar to a `div` element. You can configure almost every widget Flutter provides, and `Container` is one of the most configurable.
+One of the most used widgets is called `Container`. It's the most used because it's so flexible. If you are coming from web development `Container` is similar to a `div` element. Every widget that Flutter provides is configurable, and the special thing about `Container` is that it's one of the most configurable.
 
 ### Configuring a Widget
 
-Configuring a widget means to change something about it. For example, the `Text` widget has configurations to change the styling and we do this through a property called `textStyle`. The `ElevatedButton` has a configuration to change the color using the `color` property. The `Container` widget I keep talking about is extra configurable. You can do things like this:
+Configuring a widget means to change something about it. For example, the `Text` widget has configurations to change the styling and we do this through a property called `textStyle`. The `ElevatedButton` has a configuration to change the color using the `color` property. The `Container` widget I keep talking about is *extra* configurable. You can do things like this:
 
 ```dart
 Container(
@@ -40,13 +40,13 @@ Container(
 ),
 ```
 
-Which takes a widget that would unmodified not be visible, to this:
+Which takes a widget that without any configuration would not be visible, to this:
 
 <img src="/widget_tree/3.png" width="50%" style="margin-left: 9rem;" />
 
 ## What is a Widget Tree
 
-To build out your full application you need to take these widgets, and organize them in a tree like structure that becomes structure of your application. Let's take the pervious example with the highlighted row of icons and texts.
+To build out your full application you need to take these widgets, and organize them in a tree-like structure called a "Widget Tree" that becomes structure of your whole application. Let's take the previous example with the highlighted row of icons and texts.
 
 ![Widgets Highlighted](/widget_tree/2.png)
 
@@ -54,7 +54,7 @@ The widget tree for this layout would look like this:
 
 <img src="/widget_tree/4.png" width="70%" style="margin-left: 5rem" />
 
-This is a very important concept to understand. This is how your flutter app is built. Your write the code to create this widget tree, and Flutter uses that widget tree as a blueprint to render your application to all these devices. As you develop in Flutter you will run into problems with state management or layouts or even other problems. By understanding the widget tree you will be able to work through it and solve those problems.
+This is a very important concept to understand since this is how your Flutter app is built. Your write the code to create this widget tree, and Flutter uses that widget tree as a blueprint to render your application to all these devices. As you develop in Flutter you will run into problems with state management or layouts or even other problems. By understanding the widget tree you will be able to work through it and solve those problems.
 
 ## Widget Inspector in DevTools
 
