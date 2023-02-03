@@ -43,6 +43,7 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Learn': [
 			{ text: 'Widget Tree', link: 'flutter/widget_tree' },
+			{ text: 'Hot Reload & Hot Restart', link: 'flutter/hot_r' },
 		],
 		'Build': [
 			{ text: 'Coming Soon', link: 'flutter/comingsoon' },
