@@ -15,3 +15,7 @@ Over time, this will become the go-to place where you can learn something new. T
 It will begin with a smaller goal of becoming the best place to learn [Flutter](https://flutter.dev). It is not meant to replace the docs. The docs will cover the nitty gritty details, while hungrimind will take you down a pathway of learning concepts and building projects.
 
 To be a part of this journey come chat on [Discord](https://discord.gg/nz8kFDm7gN)!
+
+
+## Bronze Sponsors
+@ulfie22 - longest running sponsor. Thank you so much Andy ❤️
