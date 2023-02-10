@@ -43,6 +43,7 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Learn': [
 			{ text: 'Widget Tree', link: 'flutter/widget_tree' },
+			{ text: 'What is a Widget?', link: 'flutter/widget' },
 			{ text: 'Hot Reload & Hot Restart', link: 'flutter/hot_r' },
 			{ text: 'BuildContext', link: 'flutter/buildcontext' },
 		],
