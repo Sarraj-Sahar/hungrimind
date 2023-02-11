@@ -46,6 +46,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'What is a Widget?', link: 'flutter/widget' },
 			{ text: 'Hot Reload & Hot Restart', link: 'flutter/hot_r' },
 			{ text: 'BuildContext', link: 'flutter/buildcontext' },
+			{ text: 'Keys', link: 'flutter/keys' },
 		],
 		'Build': [
 			{ text: 'Coming Soon', link: 'flutter/comingsoon' },
