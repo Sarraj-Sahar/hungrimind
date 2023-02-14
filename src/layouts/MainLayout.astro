@@ -1,5 +1,4 @@
 ---
-import { inject } from "@vercel/analytics";
 import type { MarkdownHeading } from "astro";
 import type { CollectionEntry } from "astro:content";
 import Footer from "../components/Footer/Footer.astro";
@@ -11,7 +10,6 @@ import PageContent from "../components/PageContent/PageContent.astro";
 import RightSidebar from "../components/RightSidebar/RightSidebar.astro";
 import { GITHUB_EDIT_URL, SITE } from "../consts";
 
-inject();
 type Props = CollectionEntry<"docs">["data"] & {
   headings: MarkdownHeading[];
 };
@@ -25,14 +23,16 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 
 <html dir={data.dir} lang={data.lang} class="initial">
   <head>
-    <HeadCommon />
-    <HeadSEO {...data} canonicalUrl={canonicalURL} />
+    <script defer src="/_vercel/insights/script.js"></script>
 
     <script
       defer
       data-domain="hungrimind.com"
       src="https://plausible.io/js/plausible.js"
     ></script>
+    <HeadCommon />
+    <HeadSEO {...data} canonicalUrl={canonicalURL} />
+
     <title>
       {`${data.title} 🚀 ${SITE.title}`}
     </title>
