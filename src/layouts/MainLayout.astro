@@ -23,6 +23,8 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 
 <html dir={data.dir} lang={data.lang} class="initial">
   <head>
+    <HeadCommon />
+    <HeadSEO {...data} canonicalUrl={canonicalURL} />
     <script defer src="/_vercel/insights/script.js"></script>
 
     <script
@@ -30,9 +32,6 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
       data-domain="hungrimind.com"
       src="https://plausible.io/js/plausible.js"
     ></script>
-    <HeadCommon />
-    <HeadSEO {...data} canonicalUrl={canonicalURL} />
-
     <title>
       {`${data.title} 🚀 ${SITE.title}`}
     </title>
