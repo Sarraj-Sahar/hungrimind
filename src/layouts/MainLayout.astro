@@ -1,8 +1,4 @@
 ---
-import { inject } from "@vercel/analytics";
-
-inject();
-
 import type { MarkdownHeading } from "astro";
 import type { CollectionEntry } from "astro:content";
 import Footer from "../components/Footer/Footer.astro";
@@ -29,6 +25,8 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
   <head>
     <HeadCommon />
     <HeadSEO {...data} canonicalUrl={canonicalURL} />
+    <script defer src="/_vercel/insights/script.js"></script>
+
     <script
       defer
       data-domain="hungrimind.com"
