@@ -17,5 +17,5 @@ It will begin with a smaller goal of becoming the best place to learn [Flutter](
 To be a part of this journey come chat on [Discord](https://discord.gg/nz8kFDm7gN)!
 
 
-## Bronze Sponsors
+## 🥉 Bronze Sponsors
 @ulfie22 - longest running sponsor. Thank you so much Andy ❤️
