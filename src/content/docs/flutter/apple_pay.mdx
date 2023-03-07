@@ -1,0 +1,35 @@
+---
+title: Apple Pay
+description: Tutorial on how to set up apple pay for your Flutter application
+---
+
+You know what is fun about building applications? Making money with them. One way to do that is to accept payments within the application.
+
+Apple Pay is the most seamless way for people using iOS devices to pay for something. 
+
+## Setup
+You will need an Apple Developer account for this.
+
+### 1. Register an App ID
+Go to `Certificates, Identifiers, & Profiles` section on the Apple developer portal, select `Identifiers` and make sure you are on the `App IDs` filter.
+<img src="/apple_pay/appid.png" alt="App ID"/> 
+
+Click the blue plus icon, to add a new App ID, select the `App IDs` option, and an app type. Once you get to the below screen, it's very important that you put the same exact bundle identifier as the bundle identifier on the actual app you're building (you can find it in XCode). Specifically for implementing Apple Pay, you need to select the `Apple Payment Processing` option. 
+
+<img src="/apple_pay/register_app_id.png" alt="Register App ID"/> 
+
+### 2. Create a Merchant ID
+After you register it will lead you back to the `Certificates, Identifiers, & Profiles` page where you should switch to the `Merchant IDs` filter. 
+<img src="/apple_pay/merchantid.png" alt="Register App ID"/> 
+
+And once again, click the blue plus icon to create a new Merchant ID. Make sure the `Merchant IDs` option is selected and you'll be taken to the registration screen. This time you can choose whatever identifier you want, but it is recommended to follow Apple's convention.
+<img src="/apple_pay/register_merchant_id.png" alt="Register App ID"/> 
+
+### 3. Create a Apple Pay Processing Certificate
+
+### 4. Create a CSR for certificate
+
+### 5. Add apple pay ability in XCode Project
+
+
+

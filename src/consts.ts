@@ -6,10 +6,10 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true',
+		src: 'https://github.com/tadaspetra/hungrimind/tree/main/public/ytbanner.png?raw=true',
 		alt:
-			'astro logo on a starry expanse of space,' +
-			' with a purple saturn-like planet floating in the right foreground',
+			'hungrimind.com' +
+			' for curious builders',
 	},
 	twitter: 'hungrimind',
 };
@@ -47,6 +47,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Hot Reload & Hot Restart', link: 'flutter/hot_r' },
 			{ text: 'BuildContext', link: 'flutter/buildcontext' },
 			{ text: 'Keys', link: 'flutter/keys' },
+			// { text: 'Apple Pay', link: 'flutter/apple_pay' },
 		],
 		'Build': [
 			{ text: 'Coming Soon', link: 'flutter/comingsoon' },
