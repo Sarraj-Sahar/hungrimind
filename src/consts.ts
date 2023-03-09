@@ -47,7 +47,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Hot Reload & Hot Restart', link: 'flutter/hot_r' },
 			{ text: 'BuildContext', link: 'flutter/buildcontext' },
 			{ text: 'Keys', link: 'flutter/keys' },
-			// { text: 'Apple Pay', link: 'flutter/apple_pay' },
+			{ text: 'Apple Pay', link: 'flutter/apple_pay' },
 		],
 		'Build': [
 			{ text: 'Coming Soon', link: 'flutter/comingsoon' },

@@ -26,10 +26,62 @@ And once again, click the blue plus icon to create a new Merchant ID. Make sure 
 <img src="/apple_pay/register_merchant_id.png" alt="Register App ID"/> 
 
 ### 3. Create a Apple Pay Processing Certificate
+For the certificate, you need to switch to the `Certificates` and once again click the blue plus icon. Under `Services` select the `Apple Pay Payment Processing Certificate`, select the `Merchant ID` we just created and it will lead you to this screen, where you will need to a create the certificate.
+
+<img src="/apple_pay/payment_certificate.png" alt="Apple Pay Payment Processing Certificate configuration screen"/> 
 
 ### 4. Create a CSR for certificate
+Once you have clicked the button highlighted above, you will need to upload a Certificate Signing Request (CSR) file from your Mac. To do this you need to open the `Keychain Access` application which should be installed on your Mac by default.
+
+In the toolbar select `Keychain Access > Certificate Assistant > Request a Certificate from a Certificate Authority` and you should see the below screen. Add you email, name, select `Saved to disk` and `Let me specify key pair information`.
+<img src="/apple_pay/keychain access.png" alt=""/>
+
+Click continue and for the key pair information change `Algorithm` to `ECC` and `Key Size` to `256 bits`
+<img src="/apple_pay/keychain access 2.png" alt=""/> 
+
+This will save a CSR file to your specified location.
+<img src="/apple_pay/csr.png" alt=""/> 
+
+Upload it to our `Apple Pay Processing Certificate`.
+<img src="/apple_pay/csr upload.png" alt=""/> 
 
 ### 5. Add apple pay ability in XCode Project
+Now this last part is a bit easier. Open up your XCode project, select `Runner` and then `Signing & Capabilities`.
+<img src="/apple_pay/add capability.png" alt=""/> 
+
+Select `Apple Pay` and choose the `Merchant ID` that corresponds with this project.
+<img src="/apple_pay/xcode.png" alt=""/> 
+
+> **Note:** The `Bundle Identifier` for this specific project must be a registered App ID on the apple developer site. That was what we did in <a href="#1-register-an-app-id">Step #1</a>, so make sure that's the same app, or redo step #1 for this specific app.
 
 
+## What is a Merchant ID and Certificate?
+What the heck did we just even do? In order to be able to accept payments you need to have an Apple Developer account and be a "verified" merchant able to accept payments. The Payment Processing Certificate is tied directly to that Merchant ID, and is used for encrypting the payment data that is being sent. The Apple Pay servers use the certificate to encrypt that payment data, and then your payment service provide can use it to decrpyt that data. So all of this was done in the name of security.
 
+## Add it to your Flutter App
+The first thing you will need is to add the <a href="https://pub.dev/packages/pay" target="_blank">`pay`</a> package to your flutter application. You will need to create an apple pay configuration. 
+
+You can find an example default configuration <a href="https://github.com/google-pay/flutter-plugin/blob/main/pay/example/lib/payment_configurations.dart#L27" target="_blank">here</a>. To get this configuration working you need to update the `merchantIdentifier` and `displayName` to the Merchant Identifiers we set up in <a href="#2-create-a-merchant-id">Step #2</a>. You can find the complete list of parameters on the  <a href="https://developer.apple.com/documentation/passkit/pkpaymentrequest" target="_blank">Apple Pay Documentation</a>.
+
+And the very last step is to add the Apple Pay button that is provided by the <a href="https://pub.dev/packages/pay" target="_blank">`pay`</a> package to your application. Here is a basic one, but check out the <a href="https://pub.dev/packages/pay" target="_blank">`pay`</a> package for more details.
+
+```dart
+ApplePayButton(
+    paymentConfiguration: PaymentConfiguration.fromJsonString(defaultApplePay),
+    paymentItems: const [
+        PaymentItem(
+            label: 'Total',
+            amount: '0.01',
+            status: PaymentItemStatus.final_price,
+        )
+    ],
+    style: ApplePayButtonStyle.black,
+    type: ApplePayButtonType.book,
+    onPaymentResult: (result) {
+        //add what you want to happen after purchase is made
+    },
+    loadingIndicator: const Center(
+        child: CircularProgressIndicator(),
+    ),
+),
+```
